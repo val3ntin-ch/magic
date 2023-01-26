@@ -6,17 +6,25 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "riteway -r @babel/register './src/**/*.unit.test.js' | tap-nirvana"
   },
   "dependencies": {
     "@next/font": "13.1.5",
     "eslint": "8.32.0",
     "eslint-config-next": "13.1.5",
     "next": "13.1.5",
+    "nyc": "^15.1.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "tap-nirvana": "^1.1.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "@babel/plugin-transform-runtime": "^7.19.6",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/register": "^7.18.9",
+    "@babel/runtime-corejs2": "^7.20.13",
     "riteway": "^7.0.0"
   }
 }
