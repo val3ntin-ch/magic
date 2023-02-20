@@ -1,8 +1,13 @@
 const SignIn = () => (
-  <form method="POST">
-    <label for="email">email</label>
-    <input type="text" id="email" name="email" />
-    <button>Sign in</button>
-  </form>
+  <div>
+    <form method="POST">
+      <div>
+        <label htmlFor="email">Email</label>
+        <input type="text" id="email" name="email" />
+      </div>
+      <button type="button">Sign in</button>
+    </form>
+  </div>
 );
+
 export default SignIn;
