@@ -6,18 +6,18 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "test": "riteway -r @babel/register './src/**/*.unit.test.js' | tap-nirvana"
+    "lint": "eslint --fix src && echo 'Lint complete' ",
+    "test": "riteway -r @babel/register './src/**/*.unit.test.js' | tap-nirvana-extended --failedAsLast",
+    "watch": "watch 'clear && npm run -s test && npm run -s lint' src"
   },
   "dependencies": {
     "@next/font": "13.1.5",
     "eslint": "8.32.0",
     "eslint-config-next": "13.1.5",
     "next": "13.1.5",
-    "nyc": "^15.1.0",
+    "next-pwa": "^5.6.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "tap-nirvana": "^1.1.0"
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",
@@ -25,6 +25,9 @@
     "@babel/preset-env": "^7.20.2",
     "@babel/register": "^7.18.9",
     "@babel/runtime-corejs2": "^7.20.13",
-    "riteway": "^7.0.0"
+    "nyc": "^15.1.0",
+    "riteway": "^7.0.0",
+    "tap-nirvana-extended": "^1.1.2",
+    "watch": "^1.0.2"
   }
 }
