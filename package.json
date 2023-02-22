@@ -25,6 +25,7 @@
     "@babel/preset-env": "^7.20.2",
     "@babel/register": "^7.18.9",
     "@babel/runtime-corejs2": "^7.20.13",
+    "@next/bundle-analyzer": "^13.1.6",
     "nyc": "^15.1.0",
     "riteway": "^7.0.0",
     "tap-nirvana-extended": "^1.1.2",
