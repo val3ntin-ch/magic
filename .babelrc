@@ -1,3 +1,15 @@
 {
-  "presets": ["next/babel"]
+  "presets": ["next/babel"],
+  "env": {
+    "test": {
+      "plugins": [
+        [
+          "babel-plugin-transform-import-ignore",
+          {
+            "patterns": [".css", ".scss", "wildcard/*/match.css"]
+          }
+        ]
+      ]
+    }
+  }
 }
